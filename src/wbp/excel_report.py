@@ -328,33 +328,28 @@ def _scenarios_sheet(wb: Workbook, payload: dict) -> None:
         ).number_format = MONEY
         if i == 0:
             baseline_total_cell = f"$F${r}"
-            ws.cell(row=r, column=8, value=f"=F{r}-{baseline_total_cell}").number_format = MONEY
-            ws.cell(
-                row=r, column=9, value=f'=IFERROR(H{r}/{baseline_total_cell},"")'
-            ).number_format = PCT
-        else:
-            ws.cell(row=r, column=8, value=f"=F{r}-{baseline_total_cell}").number_format = MONEY
-            ws.cell(
-                row=r, column=9, value=f'=IFERROR(H{r}/{baseline_total_cell},"")'
-            ).number_format = PCT
+        ws.cell(row=r, column=8, value=f"={baseline_total_cell}-F{r}").number_format = MONEY
+        ws.cell(
+            row=r, column=9, value=f'=IFERROR(H{r}/{baseline_total_cell},"")'
+        ).number_format = PCT
 
     comp_first = comparison_header_row + 1
     comp_last = comparison_header_row + len(comparison_rows)
     ws.conditional_formatting.add(
         f"H{comp_first}:H{comp_last}",
-        FormulaRule(formula=[f"$H{comp_first}>0"], fill=RED_FILL),
+        FormulaRule(formula=[f"$H{comp_first}<0"], fill=RED_FILL),
     )
     ws.conditional_formatting.add(
         f"H{comp_first}:H{comp_last}",
-        FormulaRule(formula=[f"$H{comp_first}<0"], fill=GREEN_FILL),
+        FormulaRule(formula=[f"$H{comp_first}>0"], fill=GREEN_FILL),
     )
     ws.conditional_formatting.add(
         f"I{comp_first}:I{comp_last}",
-        FormulaRule(formula=[f"$I{comp_first}>0.05"], fill=RED_FILL),
+        FormulaRule(formula=[f"$I{comp_first}<-0.05"], fill=RED_FILL),
     )
     ws.conditional_formatting.add(
         f"I{comp_first}:I{comp_last}",
-        FormulaRule(formula=[f"$I{comp_first}<-0.05"], fill=GREEN_FILL),
+        FormulaRule(formula=[f"$I{comp_first}>0.05"], fill=GREEN_FILL),
     )
 
     break_even_row = comp_last + 3
@@ -478,15 +473,13 @@ def _variance_sheet(wb: Workbook, payload: dict) -> None:
         ).number_format = "mmm yyyy"
         ws.cell(row=r, column=5, value=float(row["planned_total_usd"])).number_format = MONEY
         ws.cell(row=r, column=6, value=float(row["actual_total_usd"])).number_format = MONEY
-        ws.cell(row=r, column=7, value=f"=F{r}-E{r}").number_format = MONEY
-        ws.cell(row=r, column=8, value=f'=IFERROR((F{r}-E{r})/E{r},"")').number_format = PCT
+        ws.cell(row=r, column=7, value=f"=E{r}-F{r}").number_format = MONEY
+        ws.cell(row=r, column=8, value=f'=IFERROR((E{r}-F{r})/E{r},"")').number_format = PCT
         ws.cell(row=r, column=9, value=float(row["ytd_variance_usd"])).number_format = MONEY
 
     last = ws.max_row
-    ws.conditional_formatting.add(f"G2:H{last}", FormulaRule(formula=["$H2>0.05"], fill=RED_FILL))
-    ws.conditional_formatting.add(
-        f"G2:H{last}", FormulaRule(formula=["$H2<-0.05"], fill=GREEN_FILL)
-    )
+    ws.conditional_formatting.add(f"G2:H{last}", FormulaRule(formula=["$H2<-0.05"], fill=RED_FILL))
+    ws.conditional_formatting.add(f"G2:H{last}", FormulaRule(formula=["$H2>0.05"], fill=GREEN_FILL))
 
     ws.cell(row=1, column=11, value="Cost Center")
     ws.cell(row=1, column=12, value="Variance USD (total)")

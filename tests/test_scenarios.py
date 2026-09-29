@@ -123,8 +123,45 @@ def test_compare_scenarios_reports_deltas():
     baseline_row = comparison[comparison["scenario"] == "baseline"].iloc[0]
     spike_row = comparison[comparison["scenario"] == "spike"].iloc[0]
     assert baseline_row["delta_total_usd"] == 0.0
-    expected_delta = round(spike_row["total_cost_usd"] - baseline_row["total_cost_usd"], 2)
+    expected_delta = round(baseline_row["total_cost_usd"] - spike_row["total_cost_usd"], 2)
     assert spike_row["delta_total_usd"] == expected_delta
+    assert spike_row["delta_total_usd"] > 0
+
+
+def test_hiring_freeze_headcount_monotonically_non_increasing():
+    frame = _run_engine(_inputs(), hiring_freeze(start_month=1))
+    for site_id in (1, 2):
+        headcount = frame[frame["site_id"] == site_id].sort_values("fiscal_month")["headcount"]
+        assert (headcount.diff().dropna() <= 0).all()
+
+
+def test_attrition_spike_multiplier_one_equals_baseline():
+    baseline = _run_engine(_inputs())
+    spiked = _run_engine(_inputs(), attrition_spike(multiplier=1.0, months=6))
+    pd.testing.assert_frame_equal(baseline, spiked)
+
+
+def test_overtime_cost_scales_with_premium():
+    low = _run_engine(
+        _inputs(), overtime_shift(ot_hours_per_head=160, premium=1.5, cap_hours_per_head=60)
+    )
+    high = _run_engine(
+        _inputs(), overtime_shift(ot_hours_per_head=160, premium=3.0, cap_hours_per_head=60)
+    )
+    gap_component_low = (low["overtime_usd"] - low["labor_usd"] * 0.05).sum()
+    gap_component_high = (high["overtime_usd"] - high["labor_usd"] * 0.05).sum()
+    assert gap_component_high == pytest.approx(2 * gap_component_low)
+
+
+def test_scenario_delta_sign_convention_costlier_is_negative():
+    baseline = _run_engine(_inputs())
+    costlier = _run_engine(
+        _inputs(), accelerated_hiring(extra_reqs_per_month=5, ramp_cost_per_hire=5000)
+    )
+    comparison = compare_scenarios(baseline, {"costlier": costlier})
+    row = comparison[comparison["scenario"] == "costlier"].iloc[0]
+    assert row["delta_total_usd"] < 0
+    assert row["delta_total_pct"] < 0
 
 
 def test_break_even_analysis_finds_crossover():

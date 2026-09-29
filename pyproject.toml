@@ -16,12 +16,21 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest==8.3.4", "ruff==0.8.4"]
+dev = ["pytest==8.3.4", "pytest-cov==6.0.0", "ruff==0.8.4"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-q"
+
+[tool.coverage.run]
+source = ["src/wbp"]
+omit = ["src/wbp/__init__.py"]
+
+[tool.coverage.report]
+fail_under = 80
+show_missing = true
+exclude_lines = ["if __name__ == \"__main__\":"]
 
 [tool.ruff]
 line-length = 100

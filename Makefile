@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: db-up db-down seed analytics scenarios test lint
+.PHONY: db-up db-down seed analytics scenarios quality test coverage lint
 
 db-up:
 	docker compose up -d
@@ -17,8 +17,14 @@ analytics:
 scenarios:
 	PYTHONPATH=src $(PYTHON) -m wbp.scenarios
 
+quality:
+	PYTHONPATH=src $(PYTHON) -m wbp.quality
+
 test:
 	PYTHONPATH=src $(PYTHON) -m pytest
+
+coverage:
+	PYTHONPATH=src $(PYTHON) -m pytest --cov=src/wbp --cov-report=term-missing
 
 lint:
 	PYTHONPATH=src $(PYTHON) -m ruff check src tests

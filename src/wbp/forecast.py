@@ -161,8 +161,9 @@ def _fit_and_forecast(
             upper[level] = interval.iloc[:, 1]
         else:
             z = norm.ppf(0.5 + level / 2.0)
-            lower[level] = forecast - z * residual_std
-            upper[level] = forecast + z * residual_std
+            horizon_scale = np.sqrt(np.arange(1, periods + 1))
+            lower[level] = forecast - z * residual_std * horizon_scale
+            upper[level] = forecast + z * residual_std * horizon_scale
     return forecast, lower, upper
 
 

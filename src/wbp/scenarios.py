@@ -239,7 +239,7 @@ def compare_scenarios(baseline: pd.DataFrame, scenarios: dict[str, pd.DataFrame]
     rows = []
     for name, frame in [("baseline", baseline), *scenarios.items()]:
         summary = _summarize(frame)
-        delta = summary["total_cost_usd"] - base["total_cost_usd"]
+        delta = base["total_cost_usd"] - summary["total_cost_usd"]
         rows.append(
             {
                 "scenario": name,

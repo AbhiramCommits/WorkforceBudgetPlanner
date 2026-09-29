@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import pytest
 
 from wbp.forecast import (
     backtest,
@@ -26,6 +27,73 @@ def test_load_params_from_yaml():
     assert params["forecast"]["seasonal_periods"] == 12
     assert params["forecast"]["confidence_levels"] == [0.80, 0.95]
     assert params["budget"]["fringe_rate"] == 0.28
+
+
+def _linear_frame(n_months: int = 48) -> pd.DataFrame:
+    index = pd.date_range("2022-09-01", periods=n_months, freq="MS")
+    t = np.arange(n_months)
+    noise = np.random.default_rng(7).normal(0, 4, n_months)
+    fte = 100.0 + 10.0 * t + noise
+    return pd.DataFrame({"fiscal_month": index, "site_id": 1, "fte": fte})
+
+
+def _seasonal_frame(n_months: int = 48) -> pd.DataFrame:
+    index = pd.date_range("2022-09-01", periods=n_months, freq="MS")
+    t = np.arange(n_months)
+    noise = np.random.default_rng(3).normal(0, 5, n_months)
+    fte = 800.0 + 8.0 * t + 60.0 * np.sin(2 * np.pi * t / 12) + noise
+    return pd.DataFrame({"fiscal_month": index, "site_id": 1, "fte": fte})
+
+
+def _seasonal_truth(step: int) -> float:
+    return 800.0 + 8.0 * (48 + step) + 60.0 * np.sin(2 * np.pi * (48 + step) / 12)
+
+
+def test_linear_trend_forecast_within_tolerance():
+    out = forecast_headcount(_linear_frame(), method="holtwinters", group_cols=["site_id"])
+    expected_h1 = 100.0 + 10.0 * 48
+    assert abs(out.iloc[0]["forecast"] - expected_h1) / expected_h1 < 0.05
+    expected_h12 = 100.0 + 10.0 * (48 + 11)
+    assert abs(out.iloc[11]["forecast"] - expected_h12) / expected_h12 < 0.10
+
+
+def test_seasonal_forecast_within_tolerance():
+    frame = _seasonal_frame()
+    for method in ("holtwinters", "sarima"):
+        out = forecast_headcount(frame, method=method, group_cols=["site_id"])
+        for step in (0, 5, 11):
+            truth = _seasonal_truth(step)
+            assert abs(out.iloc[step]["forecast"] - truth) / truth < 0.10
+
+
+def test_confidence_intervals_widen_with_horizon():
+    frame = _seasonal_frame()
+    for method in ("holtwinters", "sarima"):
+        out = forecast_headcount(frame, method=method, group_cols=["site_id"])
+        width = out["ci_high_80"] - out["ci_low_80"]
+        assert width.iloc[0] > 0
+        assert width.iloc[-1] > width.iloc[0]
+
+
+def test_backtest_mape_finite_and_bounded():
+    detail, summary, _ = backtest(_seasonal_frame(n_months=36), windows=3, verbose=False)
+    assert summary["mape"].notna().all()
+    assert (summary["mape"] < 10).all()
+    assert summary["rmse"].notna().all()
+    assert len(detail) == 2 * 3
+
+
+def test_forecast_constant_series_falls_back_gracefully():
+    index = pd.date_range("2022-09-01", periods=36, freq="MS")
+    frame = pd.DataFrame({"fiscal_month": index, "site_id": 1, "fte": 500.0})
+    for method in ("holtwinters", "sarima"):
+        out = forecast_headcount(frame, method=method, group_cols=["site_id"])
+        assert out["forecast"].notna().all()
+
+
+def test_forecast_unsupported_method_raises():
+    with pytest.raises(ValueError):
+        forecast_headcount(_linear_frame(), method="crystal_ball", group_cols=["site_id"])
 
 
 def test_forecast_headcount_both_methods():

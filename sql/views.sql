@@ -144,24 +144,24 @@ SELECT
     actual_overtime_usd,
     actual_nonlabor_usd,
     actual_total_usd,
-    ROUND(actual_labor_usd - planned_labor_usd, 2) AS labor_variance_usd,
-    ROUND((actual_labor_usd - planned_labor_usd) / NULLIF(planned_labor_usd, 0) * 100.0, 2)
+    ROUND(planned_labor_usd - actual_labor_usd, 2) AS labor_variance_usd,
+    ROUND((planned_labor_usd - actual_labor_usd) / NULLIF(planned_labor_usd, 0) * 100.0, 2)
         AS labor_variance_pct,
-    ROUND(actual_overtime_usd - planned_overtime_usd, 2) AS overtime_variance_usd,
-    ROUND((actual_overtime_usd - planned_overtime_usd) / NULLIF(planned_overtime_usd, 0) * 100.0, 2)
+    ROUND(planned_overtime_usd - actual_overtime_usd, 2) AS overtime_variance_usd,
+    ROUND((planned_overtime_usd - actual_overtime_usd) / NULLIF(planned_overtime_usd, 0) * 100.0, 2)
         AS overtime_variance_pct,
-    ROUND(actual_nonlabor_usd - planned_nonlabor_usd, 2) AS nonlabor_variance_usd,
-    ROUND((actual_nonlabor_usd - planned_nonlabor_usd) / NULLIF(planned_nonlabor_usd, 0) * 100.0, 2)
+    ROUND(planned_nonlabor_usd - actual_nonlabor_usd, 2) AS nonlabor_variance_usd,
+    ROUND((planned_nonlabor_usd - actual_nonlabor_usd) / NULLIF(planned_nonlabor_usd, 0) * 100.0, 2)
         AS nonlabor_variance_pct,
-    ROUND(actual_total_usd - planned_total_usd, 2) AS total_variance_usd,
-    ROUND((actual_total_usd - planned_total_usd) / NULLIF(planned_total_usd, 0) * 100.0, 2)
+    ROUND(planned_total_usd - actual_total_usd, 2) AS total_variance_usd,
+    ROUND((planned_total_usd - actual_total_usd) / NULLIF(planned_total_usd, 0) * 100.0, 2)
         AS total_variance_pct,
-    ROUND(SUM(actual_total_usd - planned_total_usd) OVER (
+    ROUND(SUM(planned_total_usd - actual_total_usd) OVER (
         PARTITION BY cost_center_id, EXTRACT(YEAR FROM fiscal_month)
         ORDER BY fiscal_month
     ), 2) AS ytd_variance_usd,
     ROUND(
-        SUM(actual_total_usd - planned_total_usd) OVER (
+        SUM(planned_total_usd - actual_total_usd) OVER (
             PARTITION BY cost_center_id, EXTRACT(YEAR FROM fiscal_month)
             ORDER BY fiscal_month
         )
