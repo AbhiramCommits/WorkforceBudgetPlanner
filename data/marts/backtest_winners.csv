@@ -1,0 +1,5 @@
+site_id,site_name,winning_method,mape,rmse
+1,Gresham,holtwinters,0.89,10.49
+2,Roseville,sarima,0.19,1.69
+3,Seremban,holtwinters,0.44,3.87
+4,Brno,sarima,0.36,1.79

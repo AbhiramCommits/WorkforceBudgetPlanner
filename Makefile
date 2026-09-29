@@ -1,6 +1,6 @@
 PYTHON ?= .venv/bin/python
 
-.PHONY: db-up db-down seed test lint
+.PHONY: db-up db-down seed analytics test lint
 
 db-up:
 	docker compose up -d
@@ -10,6 +10,9 @@ db-down:
 
 seed:
 	PYTHONPATH=src $(PYTHON) -m wbp.generate_data
+
+analytics:
+	PYTHONPATH=src $(PYTHON) -m wbp.analytics
 
 test:
 	PYTHONPATH=src $(PYTHON) -m pytest

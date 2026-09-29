@@ -1,0 +1,577 @@
+job_family,site_id,method,fiscal_month,forecast,ci_low_80,ci_high_80,ci_low_95,ci_high_95,winning_method
+Engineering,1,holtwinters,2026-09-01,109.45,108.08,110.82,107.35,111.55,holtwinters
+Engineering,1,holtwinters,2026-10-01,109.42,108.05,110.79,107.32,111.51,holtwinters
+Engineering,1,holtwinters,2026-11-01,109.78,108.41,111.15,107.69,111.88,holtwinters
+Engineering,1,holtwinters,2026-12-01,109.12,107.75,110.49,107.02,111.21,holtwinters
+Engineering,1,holtwinters,2027-01-01,108.45,107.08,109.82,106.35,110.55,holtwinters
+Engineering,1,holtwinters,2027-02-01,106.85,105.48,108.22,104.75,108.95,holtwinters
+Engineering,1,holtwinters,2027-03-01,106.52,105.15,107.89,104.42,108.61,holtwinters
+Engineering,1,holtwinters,2027-04-01,105.88,104.51,107.25,103.79,107.98,holtwinters
+Engineering,1,holtwinters,2027-05-01,105.88,104.51,107.25,103.79,107.98,holtwinters
+Engineering,1,holtwinters,2027-06-01,104.88,103.51,106.25,102.79,106.98,holtwinters
+Engineering,1,holtwinters,2027-07-01,104.22,102.85,105.59,102.12,106.31,holtwinters
+Engineering,1,holtwinters,2027-08-01,107.18,105.81,108.55,105.09,109.28,holtwinters
+Fab Operations,1,holtwinters,2026-09-01,356.9,354.29,359.51,352.91,360.89,holtwinters
+Fab Operations,1,holtwinters,2026-10-01,363.53,360.92,366.14,359.54,367.53,holtwinters
+Fab Operations,1,holtwinters,2026-11-01,362.9,360.29,365.51,358.91,366.89,holtwinters
+Fab Operations,1,holtwinters,2026-12-01,356.3,353.69,358.91,352.31,360.29,holtwinters
+Fab Operations,1,holtwinters,2027-01-01,350.3,347.69,352.91,346.31,354.29,holtwinters
+Fab Operations,1,holtwinters,2027-02-01,344.73,342.12,347.34,340.74,348.73,holtwinters
+Fab Operations,1,holtwinters,2027-03-01,340.73,338.12,343.34,336.74,344.73,holtwinters
+Fab Operations,1,holtwinters,2027-04-01,337.1,334.49,339.71,333.11,341.09,holtwinters
+Fab Operations,1,holtwinters,2027-05-01,333.43,330.82,336.04,329.44,337.43,holtwinters
+Fab Operations,1,holtwinters,2027-06-01,327.47,324.86,330.08,323.47,331.46,holtwinters
+Fab Operations,1,holtwinters,2027-07-01,327.13,324.52,329.74,323.14,331.13,holtwinters
+Fab Operations,1,holtwinters,2027-08-01,336.03,333.42,338.64,332.04,340.03,holtwinters
+Facilities,1,holtwinters,2026-09-01,73.8,72.93,74.67,72.47,75.13,holtwinters
+Facilities,1,holtwinters,2026-10-01,74.13,73.26,75.0,72.8,75.46,holtwinters
+Facilities,1,holtwinters,2026-11-01,73.8,72.93,74.67,72.47,75.13,holtwinters
+Facilities,1,holtwinters,2026-12-01,72.13,71.26,73.0,70.8,73.46,holtwinters
+Facilities,1,holtwinters,2027-01-01,71.46,70.59,72.33,70.13,72.79,holtwinters
+Facilities,1,holtwinters,2027-02-01,71.46,70.59,72.33,70.13,72.79,holtwinters
+Facilities,1,holtwinters,2027-03-01,70.5,69.63,71.37,69.17,71.83,holtwinters
+Facilities,1,holtwinters,2027-04-01,69.2,68.33,70.07,67.87,70.53,holtwinters
+Facilities,1,holtwinters,2027-05-01,69.2,68.33,70.07,67.87,70.53,holtwinters
+Facilities,1,holtwinters,2027-06-01,68.53,67.66,69.4,67.2,69.86,holtwinters
+Facilities,1,holtwinters,2027-07-01,68.53,67.66,69.4,67.2,69.86,holtwinters
+Facilities,1,holtwinters,2027-08-01,70.53,69.66,71.4,69.2,71.86,holtwinters
+Quality,1,holtwinters,2026-09-01,77.4,76.41,78.39,75.89,78.91,holtwinters
+Quality,1,holtwinters,2026-10-01,77.4,76.41,78.39,75.89,78.91,holtwinters
+Quality,1,holtwinters,2026-11-01,78.33,77.35,79.32,76.83,79.84,holtwinters
+Quality,1,holtwinters,2026-12-01,78.33,77.35,79.32,76.83,79.84,holtwinters
+Quality,1,holtwinters,2027-01-01,78.33,77.35,79.32,76.83,79.84,holtwinters
+Quality,1,holtwinters,2027-02-01,78.0,77.01,78.99,76.49,79.51,holtwinters
+Quality,1,holtwinters,2027-03-01,77.67,76.68,78.65,76.16,79.18,holtwinters
+Quality,1,holtwinters,2027-04-01,77.67,76.68,78.65,76.16,79.18,holtwinters
+Quality,1,holtwinters,2027-05-01,77.0,76.01,77.99,75.49,78.51,holtwinters
+Quality,1,holtwinters,2027-06-01,76.33,75.35,77.32,74.83,77.84,holtwinters
+Quality,1,holtwinters,2027-07-01,76.33,75.35,77.32,74.83,77.84,holtwinters
+Quality,1,holtwinters,2027-08-01,76.03,75.05,77.02,74.53,77.54,holtwinters
+Supply Chain,1,holtwinters,2026-09-01,89.79,88.51,91.06,87.84,91.73,holtwinters
+Supply Chain,1,holtwinters,2026-10-01,89.79,88.51,91.06,87.84,91.73,holtwinters
+Supply Chain,1,holtwinters,2026-11-01,89.79,88.51,91.06,87.84,91.73,holtwinters
+Supply Chain,1,holtwinters,2026-12-01,89.45,88.18,90.73,87.51,91.4,holtwinters
+Supply Chain,1,holtwinters,2027-01-01,88.45,87.18,89.73,86.51,90.4,holtwinters
+Supply Chain,1,holtwinters,2027-02-01,88.12,86.85,89.39,86.17,90.07,holtwinters
+Supply Chain,1,holtwinters,2027-03-01,86.45,85.18,87.73,84.51,88.4,holtwinters
+Supply Chain,1,holtwinters,2027-04-01,86.45,85.18,87.73,84.51,88.4,holtwinters
+Supply Chain,1,holtwinters,2027-05-01,85.15,83.88,86.43,83.21,87.1,holtwinters
+Supply Chain,1,holtwinters,2027-06-01,84.82,83.55,86.09,82.87,86.77,holtwinters
+Supply Chain,1,holtwinters,2027-07-01,85.15,83.88,86.43,83.21,87.1,holtwinters
+Supply Chain,1,holtwinters,2027-08-01,88.12,86.85,89.39,86.17,90.07,holtwinters
+Test & Assembly,1,holtwinters,2026-09-01,172.75,171.23,174.27,170.42,175.08,holtwinters
+Test & Assembly,1,holtwinters,2026-10-01,175.65,174.13,177.17,173.32,177.98,holtwinters
+Test & Assembly,1,holtwinters,2026-11-01,173.35,171.83,174.87,171.02,175.68,holtwinters
+Test & Assembly,1,holtwinters,2026-12-01,171.35,169.83,172.87,169.02,173.68,holtwinters
+Test & Assembly,1,holtwinters,2027-01-01,169.35,167.83,170.87,167.02,171.68,holtwinters
+Test & Assembly,1,holtwinters,2027-02-01,166.75,165.23,168.27,164.42,169.08,holtwinters
+Test & Assembly,1,holtwinters,2027-03-01,164.08,162.56,165.61,161.75,166.42,holtwinters
+Test & Assembly,1,holtwinters,2027-04-01,163.42,161.89,164.94,161.09,165.75,holtwinters
+Test & Assembly,1,holtwinters,2027-05-01,161.42,159.89,162.94,159.09,163.75,holtwinters
+Test & Assembly,1,holtwinters,2027-06-01,159.08,157.56,160.61,156.75,161.42,holtwinters
+Test & Assembly,1,holtwinters,2027-07-01,158.62,157.09,160.14,156.29,160.95,holtwinters
+Test & Assembly,1,holtwinters,2027-08-01,162.95,161.43,164.47,160.62,165.28,holtwinters
+Engineering,2,holtwinters,2026-09-01,91.89,90.62,93.16,89.95,93.83,sarima
+Engineering,2,holtwinters,2026-10-01,92.56,91.29,93.83,90.61,94.5,sarima
+Engineering,2,holtwinters,2026-11-01,91.89,90.62,93.16,89.95,93.83,sarima
+Engineering,2,holtwinters,2026-12-01,90.89,89.62,92.16,88.95,92.83,sarima
+Engineering,2,holtwinters,2027-01-01,89.62,88.35,90.9,87.68,91.57,sarima
+Engineering,2,holtwinters,2027-02-01,88.62,87.35,89.9,86.68,90.57,sarima
+Engineering,2,holtwinters,2027-03-01,86.96,85.69,88.23,85.01,88.9,sarima
+Engineering,2,holtwinters,2027-04-01,84.62,83.35,85.9,82.68,86.57,sarima
+Engineering,2,holtwinters,2027-05-01,83.36,82.09,84.63,81.41,85.3,sarima
+Engineering,2,holtwinters,2027-06-01,83.02,81.75,84.3,81.08,84.97,sarima
+Engineering,2,holtwinters,2027-07-01,85.32,84.05,86.6,83.38,87.27,sarima
+Engineering,2,holtwinters,2027-08-01,88.36,87.09,89.63,86.41,90.3,sarima
+Fab Operations,2,holtwinters,2026-09-01,287.96,286.28,289.64,285.38,290.53,sarima
+Fab Operations,2,holtwinters,2026-10-01,286.21,284.52,287.89,283.63,288.78,sarima
+Fab Operations,2,holtwinters,2026-11-01,282.22,280.54,283.91,279.65,284.8,sarima
+Fab Operations,2,holtwinters,2026-12-01,273.97,272.29,275.65,271.4,276.55,sarima
+Fab Operations,2,holtwinters,2027-01-01,268.35,266.67,270.04,265.78,270.93,sarima
+Fab Operations,2,holtwinters,2027-02-01,263.5,261.82,265.18,260.92,266.08,sarima
+Fab Operations,2,holtwinters,2027-03-01,259.58,257.9,261.27,257.01,262.16,sarima
+Fab Operations,2,holtwinters,2027-04-01,254.2,252.51,255.88,251.62,256.77,sarima
+Fab Operations,2,holtwinters,2027-05-01,249.08,247.39,250.76,246.5,251.65,sarima
+Fab Operations,2,holtwinters,2027-06-01,249.29,247.61,250.98,246.72,251.87,sarima
+Fab Operations,2,holtwinters,2027-07-01,257.81,256.12,259.49,255.23,260.38,sarima
+Fab Operations,2,holtwinters,2027-08-01,264.59,262.91,266.27,262.01,267.17,sarima
+Facilities,2,holtwinters,2026-09-01,103.98,102.73,105.22,102.07,105.89,sarima
+Facilities,2,holtwinters,2026-10-01,105.44,104.19,106.69,103.53,107.35,sarima
+Facilities,2,holtwinters,2026-11-01,106.25,105.0,107.49,104.34,108.15,sarima
+Facilities,2,holtwinters,2026-12-01,106.92,105.68,108.17,105.01,108.83,sarima
+Facilities,2,holtwinters,2027-01-01,106.88,105.63,108.13,104.97,108.79,sarima
+Facilities,2,holtwinters,2027-02-01,107.77,106.52,109.02,105.86,109.68,sarima
+Facilities,2,holtwinters,2027-03-01,107.27,106.03,108.52,105.36,109.18,sarima
+Facilities,2,holtwinters,2027-04-01,107.38,106.13,108.63,105.47,109.29,sarima
+Facilities,2,holtwinters,2027-05-01,107.13,105.88,108.38,105.22,109.04,sarima
+Facilities,2,holtwinters,2027-06-01,108.12,106.88,109.37,106.21,110.03,sarima
+Facilities,2,holtwinters,2027-07-01,109.39,108.14,110.64,107.48,111.3,sarima
+Facilities,2,holtwinters,2027-08-01,110.93,109.68,112.18,109.02,112.84,sarima
+Quality,2,holtwinters,2026-09-01,73.0,71.94,74.06,71.37,74.63,sarima
+Quality,2,holtwinters,2026-10-01,74.87,73.8,75.93,73.24,76.49,sarima
+Quality,2,holtwinters,2026-11-01,75.17,74.1,76.23,73.54,76.79,sarima
+Quality,2,holtwinters,2026-12-01,73.5,72.44,74.56,71.87,75.13,sarima
+Quality,2,holtwinters,2027-01-01,73.5,72.44,74.56,71.87,75.13,sarima
+Quality,2,holtwinters,2027-02-01,72.57,71.5,73.63,70.94,74.19,sarima
+Quality,2,holtwinters,2027-03-01,72.57,71.5,73.63,70.94,74.19,sarima
+Quality,2,holtwinters,2027-04-01,71.9,70.84,72.96,70.27,73.53,sarima
+Quality,2,holtwinters,2027-05-01,71.57,70.5,72.63,69.94,73.19,sarima
+Quality,2,holtwinters,2027-06-01,69.9,68.84,70.96,68.27,71.53,sarima
+Quality,2,holtwinters,2027-07-01,70.17,69.1,71.23,68.54,71.79,sarima
+Quality,2,holtwinters,2027-08-01,72.5,71.44,73.56,70.87,74.13,sarima
+Supply Chain,2,holtwinters,2026-09-01,74.03,73.08,74.97,72.58,75.47,sarima
+Supply Chain,2,holtwinters,2026-10-01,75.16,74.21,76.1,73.71,76.6,sarima
+Supply Chain,2,holtwinters,2026-11-01,74.93,73.99,75.88,73.49,76.38,sarima
+Supply Chain,2,holtwinters,2026-12-01,74.1,73.15,75.04,72.65,75.54,sarima
+Supply Chain,2,holtwinters,2027-01-01,72.98,72.03,73.92,71.53,74.42,sarima
+Supply Chain,2,holtwinters,2027-02-01,72.18,71.23,73.12,70.73,73.62,sarima
+Supply Chain,2,holtwinters,2027-03-01,71.73,70.78,72.67,70.28,73.17,sarima
+Supply Chain,2,holtwinters,2027-04-01,71.63,70.68,72.57,70.18,73.07,sarima
+Supply Chain,2,holtwinters,2027-05-01,70.58,69.64,71.53,69.14,72.03,sarima
+Supply Chain,2,holtwinters,2027-06-01,68.92,67.98,69.86,67.48,70.36,sarima
+Supply Chain,2,holtwinters,2027-07-01,71.58,70.63,72.52,70.13,73.02,sarima
+Supply Chain,2,holtwinters,2027-08-01,73.55,72.6,74.49,72.1,74.99,sarima
+Test & Assembly,2,holtwinters,2026-09-01,172.15,170.52,173.78,169.66,174.64,sarima
+Test & Assembly,2,holtwinters,2026-10-01,172.45,170.82,174.08,169.96,174.94,sarima
+Test & Assembly,2,holtwinters,2026-11-01,170.48,168.85,172.11,167.99,172.98,sarima
+Test & Assembly,2,holtwinters,2026-12-01,169.82,168.19,171.45,167.32,172.31,sarima
+Test & Assembly,2,holtwinters,2027-01-01,167.82,166.19,169.45,165.32,170.31,sarima
+Test & Assembly,2,holtwinters,2027-02-01,167.48,165.85,169.11,164.99,169.98,sarima
+Test & Assembly,2,holtwinters,2027-03-01,164.22,162.59,165.85,161.72,166.71,sarima
+Test & Assembly,2,holtwinters,2027-04-01,159.88,158.25,161.51,157.39,162.38,sarima
+Test & Assembly,2,holtwinters,2027-05-01,157.28,155.65,158.91,154.79,159.78,sarima
+Test & Assembly,2,holtwinters,2027-06-01,157.62,155.99,159.25,155.12,160.11,sarima
+Test & Assembly,2,holtwinters,2027-07-01,161.22,159.59,162.85,158.72,163.71,sarima
+Test & Assembly,2,holtwinters,2027-08-01,163.85,162.22,165.48,161.36,166.34,sarima
+Engineering,3,holtwinters,2026-09-01,62.29,60.43,64.15,59.44,65.14,holtwinters
+Engineering,3,holtwinters,2026-10-01,65.29,63.43,67.15,62.44,68.14,holtwinters
+Engineering,3,holtwinters,2026-11-01,66.62,64.76,68.48,63.77,69.47,holtwinters
+Engineering,3,holtwinters,2026-12-01,66.95,65.09,68.82,64.11,69.8,holtwinters
+Engineering,3,holtwinters,2027-01-01,65.29,63.43,67.15,62.44,68.14,holtwinters
+Engineering,3,holtwinters,2027-02-01,63.32,61.46,65.18,60.47,66.17,holtwinters
+Engineering,3,holtwinters,2027-03-01,62.99,61.13,64.85,60.14,65.84,holtwinters
+Engineering,3,holtwinters,2027-04-01,62.42,60.56,64.28,59.57,65.27,holtwinters
+Engineering,3,holtwinters,2027-05-01,62.09,60.23,63.95,59.24,64.94,holtwinters
+Engineering,3,holtwinters,2027-06-01,61.15,59.29,63.02,58.31,64.0,holtwinters
+Engineering,3,holtwinters,2027-07-01,60.82,58.96,62.68,57.97,63.67,holtwinters
+Engineering,3,holtwinters,2027-08-01,60.82,58.96,62.68,57.97,63.67,holtwinters
+Fab Operations,3,holtwinters,2026-09-01,331.25,328.2,334.3,326.59,335.91,holtwinters
+Fab Operations,3,holtwinters,2026-10-01,342.82,339.77,345.86,338.16,347.47,holtwinters
+Fab Operations,3,holtwinters,2026-11-01,347.42,344.37,350.46,342.76,352.07,holtwinters
+Fab Operations,3,holtwinters,2026-12-01,344.48,341.44,347.53,339.83,349.14,holtwinters
+Fab Operations,3,holtwinters,2027-01-01,338.05,335.0,341.1,333.39,342.71,holtwinters
+Fab Operations,3,holtwinters,2027-02-01,330.38,327.34,333.43,325.73,335.04,holtwinters
+Fab Operations,3,holtwinters,2027-03-01,324.15,321.1,327.2,319.49,328.81,holtwinters
+Fab Operations,3,holtwinters,2027-04-01,318.95,315.9,322.0,314.29,323.61,holtwinters
+Fab Operations,3,holtwinters,2027-05-01,311.28,308.24,314.33,306.63,315.94,holtwinters
+Fab Operations,3,holtwinters,2027-06-01,306.32,303.27,309.36,301.66,310.97,holtwinters
+Fab Operations,3,holtwinters,2027-07-01,300.45,297.4,303.5,295.79,305.11,holtwinters
+Fab Operations,3,holtwinters,2027-08-01,302.38,299.34,305.43,297.73,307.04,holtwinters
+Facilities,3,holtwinters,2026-09-01,78.7,77.54,79.86,76.92,80.48,holtwinters
+Facilities,3,holtwinters,2026-10-01,78.97,77.81,80.13,77.19,80.74,holtwinters
+Facilities,3,holtwinters,2026-11-01,80.03,78.87,81.19,78.26,81.81,holtwinters
+Facilities,3,holtwinters,2026-12-01,81.67,80.51,82.83,79.89,83.44,holtwinters
+Facilities,3,holtwinters,2027-01-01,80.33,79.17,81.49,78.56,82.11,holtwinters
+Facilities,3,holtwinters,2027-02-01,78.37,77.21,79.53,76.59,80.14,holtwinters
+Facilities,3,holtwinters,2027-03-01,77.03,75.87,78.19,75.26,78.81,holtwinters
+Facilities,3,holtwinters,2027-04-01,76.07,74.91,77.23,74.29,77.84,holtwinters
+Facilities,3,holtwinters,2027-05-01,74.73,73.57,75.89,72.96,76.51,holtwinters
+Facilities,3,holtwinters,2027-06-01,73.73,72.57,74.89,71.96,75.51,holtwinters
+Facilities,3,holtwinters,2027-07-01,73.07,71.91,74.23,71.29,74.84,holtwinters
+Facilities,3,holtwinters,2027-08-01,73.73,72.57,74.89,71.96,75.51,holtwinters
+Quality,3,holtwinters,2026-09-01,57.8,56.66,58.94,56.06,59.54,holtwinters
+Quality,3,holtwinters,2026-10-01,56.5,55.36,57.64,54.76,58.24,holtwinters
+Quality,3,holtwinters,2026-11-01,57.8,56.66,58.94,56.06,59.54,holtwinters
+Quality,3,holtwinters,2026-12-01,57.83,56.69,58.97,56.09,59.57,holtwinters
+Quality,3,holtwinters,2027-01-01,57.17,56.03,58.31,55.43,58.91,holtwinters
+Quality,3,holtwinters,2027-02-01,56.5,55.36,57.64,54.76,58.24,holtwinters
+Quality,3,holtwinters,2027-03-01,56.2,55.06,57.34,54.46,57.94,holtwinters
+Quality,3,holtwinters,2027-04-01,55.2,54.06,56.34,53.46,56.94,holtwinters
+Quality,3,holtwinters,2027-05-01,54.2,53.06,55.34,52.46,55.94,holtwinters
+Quality,3,holtwinters,2027-06-01,53.2,52.06,54.34,51.46,54.94,holtwinters
+Quality,3,holtwinters,2027-07-01,52.87,51.73,54.01,51.13,54.61,holtwinters
+Quality,3,holtwinters,2027-08-01,54.2,53.06,55.34,52.46,55.94,holtwinters
+Supply Chain,3,holtwinters,2026-09-01,58.59,57.82,59.36,57.42,59.77,holtwinters
+Supply Chain,3,holtwinters,2026-10-01,60.59,59.82,61.36,59.42,61.77,holtwinters
+Supply Chain,3,holtwinters,2026-11-01,61.59,60.82,62.36,60.42,62.77,holtwinters
+Supply Chain,3,holtwinters,2026-12-01,61.96,61.19,62.73,60.78,63.14,holtwinters
+Supply Chain,3,holtwinters,2027-01-01,60.29,59.52,61.06,59.12,61.47,holtwinters
+Supply Chain,3,holtwinters,2027-02-01,59.33,58.56,60.1,58.15,60.51,holtwinters
+Supply Chain,3,holtwinters,2027-03-01,58.99,58.22,59.76,57.82,60.17,holtwinters
+Supply Chain,3,holtwinters,2027-04-01,58.99,58.22,59.76,57.82,60.17,holtwinters
+Supply Chain,3,holtwinters,2027-05-01,58.66,57.89,59.43,57.48,59.84,holtwinters
+Supply Chain,3,holtwinters,2027-06-01,57.99,57.22,58.76,56.82,59.17,holtwinters
+Supply Chain,3,holtwinters,2027-07-01,57.66,56.89,58.43,56.48,58.84,holtwinters
+Supply Chain,3,holtwinters,2027-08-01,58.33,57.56,59.1,57.15,59.51,holtwinters
+Test & Assembly,3,holtwinters,2026-09-01,157.91,155.84,159.97,154.75,161.07,holtwinters
+Test & Assembly,3,holtwinters,2026-10-01,164.31,162.24,166.37,161.15,167.47,holtwinters
+Test & Assembly,3,holtwinters,2026-11-01,166.87,164.81,168.94,163.71,170.03,holtwinters
+Test & Assembly,3,holtwinters,2026-12-01,164.61,162.54,166.67,161.44,167.77,holtwinters
+Test & Assembly,3,holtwinters,2027-01-01,160.64,158.57,162.71,157.48,163.8,holtwinters
+Test & Assembly,3,holtwinters,2027-02-01,157.37,155.3,159.44,154.21,160.53,holtwinters
+Test & Assembly,3,holtwinters,2027-03-01,155.07,153.0,157.14,151.91,158.23,holtwinters
+Test & Assembly,3,holtwinters,2027-04-01,149.97,147.9,152.04,146.81,153.13,holtwinters
+Test & Assembly,3,holtwinters,2027-05-01,147.33,145.27,149.4,144.17,150.5,holtwinters
+Test & Assembly,3,holtwinters,2027-06-01,144.67,142.6,146.73,141.51,147.83,holtwinters
+Test & Assembly,3,holtwinters,2027-07-01,143.33,141.27,145.4,140.17,146.49,holtwinters
+Test & Assembly,3,holtwinters,2027-08-01,141.33,139.26,143.4,138.17,144.49,holtwinters
+Engineering,4,holtwinters,2026-09-01,46.6,45.48,47.73,44.89,48.32,sarima
+Engineering,4,holtwinters,2026-10-01,46.3,45.18,47.43,44.59,48.02,sarima
+Engineering,4,holtwinters,2026-11-01,46.97,45.85,48.09,45.26,48.69,sarima
+Engineering,4,holtwinters,2026-12-01,46.3,45.18,47.43,44.59,48.02,sarima
+Engineering,4,holtwinters,2027-01-01,46.3,45.18,47.43,44.59,48.02,sarima
+Engineering,4,holtwinters,2027-02-01,45.64,44.52,46.76,43.92,47.35,sarima
+Engineering,4,holtwinters,2027-03-01,45.3,44.18,46.43,43.59,47.02,sarima
+Engineering,4,holtwinters,2027-04-01,44.97,43.85,46.09,43.26,46.69,sarima
+Engineering,4,holtwinters,2027-05-01,43.97,42.85,45.09,42.26,45.69,sarima
+Engineering,4,holtwinters,2027-06-01,43.3,42.18,44.43,41.59,45.02,sarima
+Engineering,4,holtwinters,2027-07-01,42.3,41.18,43.43,40.59,44.02,sarima
+Engineering,4,holtwinters,2027-08-01,42.64,41.52,43.76,40.92,44.35,sarima
+Fab Operations,4,holtwinters,2026-09-01,138.6,137.29,139.91,136.6,140.6,sarima
+Fab Operations,4,holtwinters,2026-10-01,137.8,136.49,139.11,135.8,139.8,sarima
+Fab Operations,4,holtwinters,2026-11-01,136.8,135.49,138.11,134.8,138.8,sarima
+Fab Operations,4,holtwinters,2026-12-01,134.53,133.23,135.84,132.54,136.53,sarima
+Fab Operations,4,holtwinters,2027-01-01,133.53,132.23,134.84,131.53,135.53,sarima
+Fab Operations,4,holtwinters,2027-02-01,130.9,129.59,132.21,128.9,132.9,sarima
+Fab Operations,4,holtwinters,2027-03-01,127.57,126.26,128.87,125.57,129.56,sarima
+Fab Operations,4,holtwinters,2027-04-01,124.23,122.93,125.54,122.23,126.23,sarima
+Fab Operations,4,holtwinters,2027-05-01,122.57,121.26,123.87,120.57,124.56,sarima
+Fab Operations,4,holtwinters,2027-06-01,118.9,117.59,120.21,116.9,120.9,sarima
+Fab Operations,4,holtwinters,2027-07-01,117.57,116.26,118.87,115.57,119.56,sarima
+Fab Operations,4,holtwinters,2027-08-01,119.97,118.66,121.27,117.97,121.96,sarima
+Facilities,4,holtwinters,2026-09-01,54.6,53.53,55.67,52.96,56.24,sarima
+Facilities,4,holtwinters,2026-10-01,55.23,54.16,56.31,53.59,56.88,sarima
+Facilities,4,holtwinters,2026-11-01,54.57,53.49,55.64,52.92,56.21,sarima
+Facilities,4,holtwinters,2026-12-01,54.57,53.49,55.64,52.92,56.21,sarima
+Facilities,4,holtwinters,2027-01-01,54.23,53.16,55.31,52.59,55.88,sarima
+Facilities,4,holtwinters,2027-02-01,54.23,53.16,55.31,52.59,55.88,sarima
+Facilities,4,holtwinters,2027-03-01,53.9,52.83,54.97,52.26,55.54,sarima
+Facilities,4,holtwinters,2027-04-01,52.9,51.83,53.97,51.26,54.54,sarima
+Facilities,4,holtwinters,2027-05-01,51.23,50.16,52.31,49.59,52.88,sarima
+Facilities,4,holtwinters,2027-06-01,50.6,49.53,51.67,48.96,52.24,sarima
+Facilities,4,holtwinters,2027-07-01,50.27,49.19,51.34,48.62,51.91,sarima
+Facilities,4,holtwinters,2027-08-01,50.27,49.19,51.34,48.62,51.91,sarima
+Quality,4,holtwinters,2026-09-01,49.08,48.42,49.75,48.07,50.1,sarima
+Quality,4,holtwinters,2026-10-01,49.2,48.54,49.87,48.19,50.22,sarima
+Quality,4,holtwinters,2026-11-01,48.93,48.26,49.59,47.91,49.94,sarima
+Quality,4,holtwinters,2026-12-01,47.66,47.0,48.33,46.65,48.68,sarima
+Quality,4,holtwinters,2027-01-01,47.41,46.75,48.07,46.39,48.43,sarima
+Quality,4,holtwinters,2027-02-01,46.83,46.17,47.5,45.82,47.85,sarima
+Quality,4,holtwinters,2027-03-01,45.93,45.27,46.59,44.91,46.95,sarima
+Quality,4,holtwinters,2027-04-01,45.71,45.04,46.37,44.69,46.72,sarima
+Quality,4,holtwinters,2027-05-01,44.82,44.16,45.49,43.81,45.84,sarima
+Quality,4,holtwinters,2027-06-01,43.62,42.95,44.28,42.6,44.63,sarima
+Quality,4,holtwinters,2027-07-01,42.75,42.09,43.42,41.74,43.77,sarima
+Quality,4,holtwinters,2027-08-01,42.9,42.24,43.56,41.88,43.92,sarima
+Supply Chain,4,holtwinters,2026-09-01,43.8,42.95,44.65,42.5,45.1,sarima
+Supply Chain,4,holtwinters,2026-10-01,43.73,42.89,44.58,42.44,45.03,sarima
+Supply Chain,4,holtwinters,2026-11-01,43.07,42.22,43.91,41.77,44.36,sarima
+Supply Chain,4,holtwinters,2026-12-01,42.47,41.62,43.31,41.17,43.76,sarima
+Supply Chain,4,holtwinters,2027-01-01,41.83,40.99,42.68,40.54,43.13,sarima
+Supply Chain,4,holtwinters,2027-02-01,41.17,40.32,42.01,39.87,42.46,sarima
+Supply Chain,4,holtwinters,2027-03-01,40.5,39.65,41.35,39.2,41.8,sarima
+Supply Chain,4,holtwinters,2027-04-01,40.17,39.32,41.01,38.87,41.46,sarima
+Supply Chain,4,holtwinters,2027-05-01,39.83,38.99,40.68,38.54,41.13,sarima
+Supply Chain,4,holtwinters,2027-06-01,39.83,38.99,40.68,38.54,41.13,sarima
+Supply Chain,4,holtwinters,2027-07-01,40.83,39.99,41.68,39.54,42.13,sarima
+Supply Chain,4,holtwinters,2027-08-01,41.5,40.65,42.35,40.2,42.8,sarima
+Test & Assembly,4,holtwinters,2026-09-01,87.1,85.7,88.5,84.96,89.24,sarima
+Test & Assembly,4,holtwinters,2026-10-01,89.1,87.7,90.5,86.96,91.24,sarima
+Test & Assembly,4,holtwinters,2026-11-01,89.14,87.74,90.53,86.99,91.28,sarima
+Test & Assembly,4,holtwinters,2026-12-01,88.14,86.74,89.53,85.99,90.28,sarima
+Test & Assembly,4,holtwinters,2027-01-01,86.47,85.07,87.87,84.33,88.61,sarima
+Test & Assembly,4,holtwinters,2027-02-01,83.87,82.47,85.27,81.73,86.01,sarima
+Test & Assembly,4,holtwinters,2027-03-01,82.2,80.8,83.6,80.06,84.34,sarima
+Test & Assembly,4,holtwinters,2027-04-01,79.87,78.47,81.27,77.73,82.01,sarima
+Test & Assembly,4,holtwinters,2027-05-01,78.87,77.47,80.27,76.73,81.01,sarima
+Test & Assembly,4,holtwinters,2027-06-01,76.87,75.47,78.27,74.73,79.01,sarima
+Test & Assembly,4,holtwinters,2027-07-01,75.24,73.84,76.63,73.09,77.38,sarima
+Test & Assembly,4,holtwinters,2027-08-01,74.9,73.5,76.3,72.76,77.04,sarima
+Engineering,1,sarima,2026-09-01,107.21,81.79,132.64,68.34,146.09,holtwinters
+Engineering,1,sarima,2026-10-01,105.46,80.04,130.88,66.58,144.34,holtwinters
+Engineering,1,sarima,2026-11-01,104.88,79.46,130.3,66.0,143.76,holtwinters
+Engineering,1,sarima,2026-12-01,104.5,79.08,129.93,65.62,143.38,holtwinters
+Engineering,1,sarima,2027-01-01,104.2,78.78,129.62,65.32,143.08,holtwinters
+Engineering,1,sarima,2027-02-01,103.63,78.21,129.06,64.75,142.51,holtwinters
+Engineering,1,sarima,2027-03-01,103.45,78.02,128.87,64.57,142.32,holtwinters
+Engineering,1,sarima,2027-04-01,103.12,77.7,128.54,64.24,142.0,holtwinters
+Engineering,1,sarima,2027-05-01,103.12,77.69,128.54,64.24,142.0,holtwinters
+Engineering,1,sarima,2027-06-01,102.77,77.34,128.19,63.89,141.65,holtwinters
+Engineering,1,sarima,2027-07-01,102.89,77.47,128.32,64.01,141.77,holtwinters
+Engineering,1,sarima,2027-08-01,103.94,78.51,129.36,65.06,142.81,holtwinters
+Fab Operations,1,sarima,2026-09-01,354.83,248.47,461.19,192.16,517.5,holtwinters
+Fab Operations,1,sarima,2026-10-01,359.56,253.19,465.92,196.89,522.22,holtwinters
+Fab Operations,1,sarima,2026-11-01,358.82,252.46,465.18,196.15,521.49,holtwinters
+Fab Operations,1,sarima,2026-12-01,352.53,246.16,458.89,189.86,515.2,holtwinters
+Fab Operations,1,sarima,2027-01-01,347.38,241.02,453.75,184.71,510.05,holtwinters
+Fab Operations,1,sarima,2027-02-01,343.43,237.06,449.79,180.76,506.1,holtwinters
+Fab Operations,1,sarima,2027-03-01,339.17,232.8,445.53,176.5,501.84,holtwinters
+Fab Operations,1,sarima,2027-04-01,335.48,229.11,441.84,172.81,498.15,holtwinters
+Fab Operations,1,sarima,2027-05-01,331.94,225.57,438.3,169.27,494.61,holtwinters
+Fab Operations,1,sarima,2027-06-01,325.3,218.94,431.67,162.64,487.97,holtwinters
+Fab Operations,1,sarima,2027-07-01,328.8,222.44,435.16,166.13,491.47,holtwinters
+Fab Operations,1,sarima,2027-08-01,336.65,230.29,443.02,173.98,499.32,holtwinters
+Facilities,1,sarima,2026-09-01,73.69,51.21,96.17,39.31,108.07,holtwinters
+Facilities,1,sarima,2026-10-01,74.41,51.93,96.89,40.03,108.79,holtwinters
+Facilities,1,sarima,2026-11-01,73.97,51.49,96.45,39.59,108.35,holtwinters
+Facilities,1,sarima,2026-12-01,73.01,50.53,95.49,38.63,107.39,holtwinters
+Facilities,1,sarima,2027-01-01,72.48,50.0,94.96,38.1,106.86,holtwinters
+Facilities,1,sarima,2027-02-01,72.51,50.03,94.99,38.13,106.89,holtwinters
+Facilities,1,sarima,2027-03-01,71.38,48.9,93.86,37.0,105.76,holtwinters
+Facilities,1,sarima,2027-04-01,69.78,47.3,92.26,35.4,104.16,holtwinters
+Facilities,1,sarima,2027-05-01,69.79,47.31,92.27,35.41,104.17,holtwinters
+Facilities,1,sarima,2027-06-01,69.59,47.11,92.07,35.21,103.97,holtwinters
+Facilities,1,sarima,2027-07-01,70.05,47.57,92.53,35.67,104.43,holtwinters
+Facilities,1,sarima,2027-08-01,71.11,48.63,93.59,36.73,105.49,holtwinters
+Quality,1,sarima,2026-09-01,76.98,59.06,94.89,49.58,104.38,holtwinters
+Quality,1,sarima,2026-10-01,77.02,59.11,94.94,49.63,104.42,holtwinters
+Quality,1,sarima,2026-11-01,77.12,59.2,95.03,49.72,104.52,holtwinters
+Quality,1,sarima,2026-12-01,77.14,59.23,95.05,49.74,104.54,holtwinters
+Quality,1,sarima,2027-01-01,77.16,59.24,95.07,49.76,104.55,holtwinters
+Quality,1,sarima,2027-02-01,77.03,59.12,94.95,49.63,104.43,holtwinters
+Quality,1,sarima,2027-03-01,77.08,59.16,94.99,49.68,104.47,holtwinters
+Quality,1,sarima,2027-04-01,77.08,59.17,95.0,49.68,104.48,holtwinters
+Quality,1,sarima,2027-05-01,77.16,59.24,95.07,49.76,104.55,holtwinters
+Quality,1,sarima,2027-06-01,77.06,59.14,94.97,49.66,104.46,holtwinters
+Quality,1,sarima,2027-07-01,77.22,59.31,95.14,49.83,104.62,holtwinters
+Quality,1,sarima,2027-08-01,77.24,59.33,95.16,49.85,104.64,holtwinters
+Supply Chain,1,sarima,2026-09-01,87.67,65.72,109.62,54.1,121.24,holtwinters
+Supply Chain,1,sarima,2026-10-01,87.12,65.17,109.07,53.55,120.69,holtwinters
+Supply Chain,1,sarima,2026-11-01,86.69,64.74,108.64,53.12,120.26,holtwinters
+Supply Chain,1,sarima,2026-12-01,86.34,64.39,108.29,52.77,119.91,holtwinters
+Supply Chain,1,sarima,2027-01-01,86.15,64.2,108.1,52.58,119.72,holtwinters
+Supply Chain,1,sarima,2027-02-01,86.09,64.14,108.04,52.52,119.66,holtwinters
+Supply Chain,1,sarima,2027-03-01,86.16,64.21,108.11,52.59,119.73,holtwinters
+Supply Chain,1,sarima,2027-04-01,86.13,64.18,108.08,52.56,119.7,holtwinters
+Supply Chain,1,sarima,2027-05-01,85.85,63.9,107.8,52.28,119.42,holtwinters
+Supply Chain,1,sarima,2027-06-01,85.74,63.79,107.69,52.17,119.31,holtwinters
+Supply Chain,1,sarima,2027-07-01,85.07,63.12,107.02,51.5,118.64,holtwinters
+Supply Chain,1,sarima,2027-08-01,85.1,63.15,107.05,51.53,118.67,holtwinters
+Test & Assembly,1,sarima,2026-09-01,171.34,112.3,230.39,81.04,261.64,holtwinters
+Test & Assembly,1,sarima,2026-10-01,172.94,113.9,231.99,82.64,263.24,holtwinters
+Test & Assembly,1,sarima,2026-11-01,171.0,111.96,230.05,80.71,261.3,holtwinters
+Test & Assembly,1,sarima,2026-12-01,169.5,110.46,228.54,79.2,259.8,holtwinters
+Test & Assembly,1,sarima,2027-01-01,168.34,109.3,227.38,78.04,258.64,holtwinters
+Test & Assembly,1,sarima,2027-02-01,166.98,107.94,226.02,76.68,257.28,holtwinters
+Test & Assembly,1,sarima,2027-03-01,165.32,106.28,224.37,75.02,255.62,holtwinters
+Test & Assembly,1,sarima,2027-04-01,164.85,105.81,223.89,74.55,255.15,holtwinters
+Test & Assembly,1,sarima,2027-05-01,163.6,104.56,222.64,73.3,253.9,holtwinters
+Test & Assembly,1,sarima,2027-06-01,162.33,103.29,221.38,72.03,252.63,holtwinters
+Test & Assembly,1,sarima,2027-07-01,161.81,102.76,220.85,71.51,252.1,holtwinters
+Test & Assembly,1,sarima,2027-08-01,164.54,105.5,223.59,74.24,254.84,holtwinters
+Engineering,2,sarima,2026-09-01,91.1,67.72,114.47,55.35,126.85,sarima
+Engineering,2,sarima,2026-10-01,91.64,68.26,115.01,55.89,127.38,sarima
+Engineering,2,sarima,2026-11-01,91.19,67.82,114.57,55.45,126.94,sarima
+Engineering,2,sarima,2026-12-01,90.29,66.92,113.66,54.54,126.04,sarima
+Engineering,2,sarima,2027-01-01,89.96,66.58,113.33,54.21,125.7,sarima
+Engineering,2,sarima,2027-02-01,89.59,66.21,112.96,53.84,125.34,sarima
+Engineering,2,sarima,2027-03-01,89.09,65.72,112.47,53.34,124.84,sarima
+Engineering,2,sarima,2027-04-01,88.9,65.53,112.28,53.15,124.65,sarima
+Engineering,2,sarima,2027-05-01,88.85,65.48,112.23,53.1,124.6,sarima
+Engineering,2,sarima,2027-06-01,88.43,65.06,111.8,52.68,124.18,sarima
+Engineering,2,sarima,2027-07-01,88.71,65.33,112.08,52.96,124.45,sarima
+Engineering,2,sarima,2027-08-01,89.33,65.96,112.71,53.58,125.08,sarima
+Fab Operations,2,sarima,2026-09-01,289.35,210.93,367.78,169.41,409.3,sarima
+Fab Operations,2,sarima,2026-10-01,289.57,211.14,368.0,169.62,409.51,sarima
+Fab Operations,2,sarima,2026-11-01,288.68,210.26,367.11,168.74,408.63,sarima
+Fab Operations,2,sarima,2026-12-01,283.86,205.43,362.28,163.91,403.8,sarima
+Fab Operations,2,sarima,2027-01-01,282.76,204.34,361.19,162.82,402.71,sarima
+Fab Operations,2,sarima,2027-02-01,280.54,202.12,358.97,160.6,400.49,sarima
+Fab Operations,2,sarima,2027-03-01,278.73,200.3,357.15,158.78,398.67,sarima
+Fab Operations,2,sarima,2027-04-01,276.67,198.25,355.1,156.73,396.62,sarima
+Fab Operations,2,sarima,2027-05-01,274.51,196.09,352.94,154.57,394.46,sarima
+Fab Operations,2,sarima,2027-06-01,274.53,196.11,352.96,154.59,394.48,sarima
+Fab Operations,2,sarima,2027-07-01,279.11,200.68,357.54,159.17,399.06,sarima
+Fab Operations,2,sarima,2027-08-01,283.45,205.02,361.88,163.51,403.39,sarima
+Facilities,2,sarima,2026-09-01,102.49,77.43,127.55,64.17,140.82,sarima
+Facilities,2,sarima,2026-10-01,102.56,77.5,127.62,64.24,140.89,sarima
+Facilities,2,sarima,2026-11-01,102.13,77.07,127.19,63.81,140.46,sarima
+Facilities,2,sarima,2026-12-01,101.41,76.35,126.47,63.08,139.73,sarima
+Facilities,2,sarima,2027-01-01,100.78,75.72,125.84,62.45,139.1,sarima
+Facilities,2,sarima,2027-02-01,100.6,75.54,125.66,62.28,138.93,sarima
+Facilities,2,sarima,2027-03-01,100.29,75.23,125.35,61.96,138.61,sarima
+Facilities,2,sarima,2027-04-01,100.12,75.06,125.18,61.8,138.45,sarima
+Facilities,2,sarima,2027-05-01,99.84,74.78,124.9,61.52,138.17,sarima
+Facilities,2,sarima,2027-06-01,99.67,74.61,124.73,61.35,138.0,sarima
+Facilities,2,sarima,2027-07-01,100.59,75.54,125.65,62.27,138.92,sarima
+Facilities,2,sarima,2027-08-01,101.26,76.2,126.32,62.94,139.59,sarima
+Quality,2,sarima,2026-09-01,73.59,55.93,91.25,46.59,100.6,sarima
+Quality,2,sarima,2026-10-01,74.22,56.56,91.88,47.21,101.22,sarima
+Quality,2,sarima,2026-11-01,73.94,56.28,91.6,46.94,100.95,sarima
+Quality,2,sarima,2026-12-01,71.52,53.86,89.18,44.51,98.52,sarima
+Quality,2,sarima,2027-01-01,71.52,53.86,89.18,44.51,98.53,sarima
+Quality,2,sarima,2027-02-01,70.45,52.79,88.11,43.44,97.46,sarima
+Quality,2,sarima,2027-03-01,70.45,52.79,88.11,43.44,97.46,sarima
+Quality,2,sarima,2027-04-01,70.34,52.68,88.0,43.33,97.34,sarima
+Quality,2,sarima,2027-05-01,70.28,52.62,87.94,43.28,97.29,sarima
+Quality,2,sarima,2027-06-01,70.75,53.09,88.41,43.75,97.76,sarima
+Quality,2,sarima,2027-07-01,71.21,53.55,88.87,44.2,98.22,sarima
+Quality,2,sarima,2027-08-01,72.63,54.97,90.29,45.62,99.63,sarima
+Supply Chain,2,sarima,2026-09-01,73.65,56.53,90.78,47.47,99.84,sarima
+Supply Chain,2,sarima,2026-10-01,73.94,56.82,91.06,47.76,100.13,sarima
+Supply Chain,2,sarima,2026-11-01,73.41,56.29,90.53,47.23,99.6,sarima
+Supply Chain,2,sarima,2026-12-01,72.71,55.59,89.83,46.52,98.89,sarima
+Supply Chain,2,sarima,2027-01-01,72.11,54.99,89.23,45.92,98.29,sarima
+Supply Chain,2,sarima,2027-02-01,71.66,54.54,88.78,45.47,97.84,sarima
+Supply Chain,2,sarima,2027-03-01,71.43,54.3,88.55,45.24,97.61,sarima
+Supply Chain,2,sarima,2027-04-01,71.32,54.2,88.44,45.13,97.5,sarima
+Supply Chain,2,sarima,2027-05-01,70.91,53.79,88.04,44.73,97.1,sarima
+Supply Chain,2,sarima,2027-06-01,70.38,53.25,87.5,44.19,96.56,sarima
+Supply Chain,2,sarima,2027-07-01,71.17,54.04,88.29,44.98,97.35,sarima
+Supply Chain,2,sarima,2027-08-01,71.79,54.67,88.91,45.61,97.98,sarima
+Test & Assembly,2,sarima,2026-09-01,167.4,123.74,211.06,100.63,234.17,sarima
+Test & Assembly,2,sarima,2026-10-01,166.81,123.15,210.47,100.04,233.58,sarima
+Test & Assembly,2,sarima,2026-11-01,165.85,122.19,209.51,99.08,232.62,sarima
+Test & Assembly,2,sarima,2026-12-01,165.45,121.8,209.11,98.68,232.22,sarima
+Test & Assembly,2,sarima,2027-01-01,164.95,121.29,208.61,98.18,231.72,sarima
+Test & Assembly,2,sarima,2027-02-01,164.64,120.98,208.3,97.87,231.41,sarima
+Test & Assembly,2,sarima,2027-03-01,163.91,120.26,207.57,97.14,230.68,sarima
+Test & Assembly,2,sarima,2027-04-01,162.83,119.18,206.49,96.06,229.6,sarima
+Test & Assembly,2,sarima,2027-05-01,162.84,119.18,206.5,96.07,229.61,sarima
+Test & Assembly,2,sarima,2027-06-01,162.74,119.08,206.4,95.97,229.51,sarima
+Test & Assembly,2,sarima,2027-07-01,163.12,119.46,206.78,96.35,229.89,sarima
+Test & Assembly,2,sarima,2027-08-01,163.78,120.13,207.44,97.01,230.56,sarima
+Engineering,3,sarima,2026-09-01,61.02,47.01,75.03,39.59,82.44,holtwinters
+Engineering,3,sarima,2026-10-01,59.79,45.78,73.8,38.36,81.21,holtwinters
+Engineering,3,sarima,2026-11-01,59.36,45.35,73.37,37.93,80.79,holtwinters
+Engineering,3,sarima,2026-12-01,59.07,45.06,73.08,37.65,80.5,holtwinters
+Engineering,3,sarima,2027-01-01,60.49,46.48,74.5,39.07,81.92,holtwinters
+Engineering,3,sarima,2027-02-01,61.08,47.08,75.09,39.66,82.51,holtwinters
+Engineering,3,sarima,2027-03-01,61.02,47.01,75.03,39.59,82.45,holtwinters
+Engineering,3,sarima,2027-04-01,61.25,47.24,75.26,39.82,82.67,holtwinters
+Engineering,3,sarima,2027-05-01,61.17,47.16,75.18,39.74,82.59,holtwinters
+Engineering,3,sarima,2027-06-01,61.74,47.73,75.75,40.31,83.17,holtwinters
+Engineering,3,sarima,2027-07-01,62.12,48.11,76.13,40.69,83.54,holtwinters
+Engineering,3,sarima,2027-08-01,62.83,48.82,76.83,41.4,84.25,holtwinters
+Fab Operations,3,sarima,2026-09-01,328.92,229.31,428.52,176.59,481.24,holtwinters
+Fab Operations,3,sarima,2026-10-01,336.17,236.57,435.77,183.84,488.5,holtwinters
+Fab Operations,3,sarima,2026-11-01,338.21,238.61,437.82,185.89,490.54,holtwinters
+Fab Operations,3,sarima,2026-12-01,335.7,236.1,435.3,183.37,488.03,holtwinters
+Fab Operations,3,sarima,2027-01-01,331.16,231.56,430.76,178.83,483.49,holtwinters
+Fab Operations,3,sarima,2027-02-01,326.39,226.79,425.99,174.06,478.72,holtwinters
+Fab Operations,3,sarima,2027-03-01,322.65,223.05,422.25,170.32,474.98,holtwinters
+Fab Operations,3,sarima,2027-04-01,319.6,220.0,419.21,167.28,471.93,holtwinters
+Fab Operations,3,sarima,2027-05-01,314.83,215.23,414.43,162.5,467.16,holtwinters
+Fab Operations,3,sarima,2027-06-01,311.97,212.37,411.57,159.64,464.3,holtwinters
+Fab Operations,3,sarima,2027-07-01,308.6,209.0,408.2,156.27,460.93,holtwinters
+Fab Operations,3,sarima,2027-08-01,309.12,209.51,408.72,156.79,461.45,holtwinters
+Facilities,3,sarima,2026-09-01,74.38,57.07,91.7,47.9,100.87,holtwinters
+Facilities,3,sarima,2026-10-01,74.21,56.9,91.53,47.73,100.7,holtwinters
+Facilities,3,sarima,2026-11-01,73.78,56.46,91.1,47.29,100.26,holtwinters
+Facilities,3,sarima,2026-12-01,73.8,56.48,91.12,47.32,100.29,holtwinters
+Facilities,3,sarima,2027-01-01,73.75,56.43,91.07,47.27,100.24,holtwinters
+Facilities,3,sarima,2027-02-01,74.03,56.71,91.35,47.55,100.52,holtwinters
+Facilities,3,sarima,2027-03-01,74.39,57.07,91.7,47.9,100.87,holtwinters
+Facilities,3,sarima,2027-04-01,74.47,57.15,91.79,47.99,100.96,holtwinters
+Facilities,3,sarima,2027-05-01,75.03,57.72,92.35,48.55,101.52,holtwinters
+Facilities,3,sarima,2027-06-01,75.54,58.22,92.86,49.06,102.03,holtwinters
+Facilities,3,sarima,2027-07-01,75.81,58.49,93.12,49.32,102.29,holtwinters
+Facilities,3,sarima,2027-08-01,75.85,58.53,93.17,49.37,102.34,holtwinters
+Quality,3,sarima,2026-09-01,56.71,40.1,73.32,31.31,82.11,holtwinters
+Quality,3,sarima,2026-10-01,55.43,38.82,72.04,30.03,80.84,holtwinters
+Quality,3,sarima,2026-11-01,55.66,39.04,72.27,30.25,81.06,holtwinters
+Quality,3,sarima,2026-12-01,55.5,38.89,72.11,30.1,80.9,holtwinters
+Quality,3,sarima,2027-01-01,55.21,38.6,71.82,29.81,80.61,holtwinters
+Quality,3,sarima,2027-02-01,55.33,38.72,71.94,29.93,80.73,holtwinters
+Quality,3,sarima,2027-03-01,55.33,38.72,71.94,29.92,80.73,holtwinters
+Quality,3,sarima,2027-04-01,55.08,38.47,71.69,29.68,80.49,holtwinters
+Quality,3,sarima,2027-05-01,54.98,38.37,71.59,29.58,80.38,holtwinters
+Quality,3,sarima,2027-06-01,54.73,38.11,71.34,29.32,80.13,holtwinters
+Quality,3,sarima,2027-07-01,54.69,38.08,71.3,29.29,80.09,holtwinters
+Quality,3,sarima,2027-08-01,55.14,38.53,71.75,29.74,80.54,holtwinters
+Supply Chain,3,sarima,2026-09-01,56.84,42.37,71.31,34.7,78.97,holtwinters
+Supply Chain,3,sarima,2026-10-01,57.1,42.62,71.57,34.96,79.23,holtwinters
+Supply Chain,3,sarima,2026-11-01,56.99,42.51,71.46,34.85,79.12,holtwinters
+Supply Chain,3,sarima,2026-12-01,56.94,42.46,71.41,34.8,79.07,holtwinters
+Supply Chain,3,sarima,2027-01-01,56.98,42.51,71.45,34.84,79.11,holtwinters
+Supply Chain,3,sarima,2027-02-01,56.68,42.2,71.15,34.54,78.81,holtwinters
+Supply Chain,3,sarima,2027-03-01,56.51,42.04,70.99,34.38,78.65,holtwinters
+Supply Chain,3,sarima,2027-04-01,56.51,42.04,70.98,34.38,78.65,holtwinters
+Supply Chain,3,sarima,2027-05-01,56.35,41.88,70.82,34.22,78.48,holtwinters
+Supply Chain,3,sarima,2027-06-01,56.37,41.9,70.85,34.24,78.51,holtwinters
+Supply Chain,3,sarima,2027-07-01,56.38,41.91,70.86,34.25,78.52,holtwinters
+Supply Chain,3,sarima,2027-08-01,56.02,41.54,70.49,33.88,78.15,holtwinters
+Test & Assembly,3,sarima,2026-09-01,155.3,97.05,213.55,66.22,244.38,holtwinters
+Test & Assembly,3,sarima,2026-10-01,159.14,100.89,217.39,70.06,248.22,holtwinters
+Test & Assembly,3,sarima,2026-11-01,163.12,104.88,221.37,74.04,252.21,holtwinters
+Test & Assembly,3,sarima,2026-12-01,160.83,102.58,219.08,71.75,249.91,holtwinters
+Test & Assembly,3,sarima,2027-01-01,157.14,98.89,215.39,68.06,246.22,holtwinters
+Test & Assembly,3,sarima,2027-02-01,154.83,96.59,213.08,65.75,243.92,holtwinters
+Test & Assembly,3,sarima,2027-03-01,151.49,93.24,209.74,62.41,240.57,holtwinters
+Test & Assembly,3,sarima,2027-04-01,149.43,91.18,207.68,60.35,238.51,holtwinters
+Test & Assembly,3,sarima,2027-05-01,148.38,90.14,206.63,59.3,237.47,holtwinters
+Test & Assembly,3,sarima,2027-06-01,147.87,89.62,206.12,58.79,236.95,holtwinters
+Test & Assembly,3,sarima,2027-07-01,147.69,89.44,205.94,58.61,236.77,holtwinters
+Test & Assembly,3,sarima,2027-08-01,146.18,87.93,204.43,57.1,235.26,holtwinters
+Engineering,4,sarima,2026-09-01,46.45,34.44,58.46,28.08,64.82,sarima
+Engineering,4,sarima,2026-10-01,46.69,34.68,58.7,28.33,65.06,sarima
+Engineering,4,sarima,2026-11-01,47.04,35.03,59.05,28.67,65.41,sarima
+Engineering,4,sarima,2026-12-01,47.01,35.0,59.02,28.64,65.37,sarima
+Engineering,4,sarima,2027-01-01,47.14,35.13,59.15,28.77,65.51,sarima
+Engineering,4,sarima,2027-02-01,47.26,35.25,59.27,28.9,65.63,sarima
+Engineering,4,sarima,2027-03-01,47.35,35.34,59.36,28.99,65.72,sarima
+Engineering,4,sarima,2027-04-01,47.44,35.43,59.45,29.08,65.81,sarima
+Engineering,4,sarima,2027-05-01,47.14,35.13,59.15,28.77,65.51,sarima
+Engineering,4,sarima,2027-06-01,47.19,35.18,59.2,28.82,65.56,sarima
+Engineering,4,sarima,2027-07-01,46.64,34.63,58.65,28.27,65.01,sarima
+Engineering,4,sarima,2027-08-01,47.05,35.04,59.06,28.69,65.42,sarima
+Fab Operations,4,sarima,2026-09-01,137.51,87.67,187.35,61.28,213.74,sarima
+Fab Operations,4,sarima,2026-10-01,137.21,87.36,187.05,60.98,213.43,sarima
+Fab Operations,4,sarima,2026-11-01,135.95,86.11,185.79,59.72,212.18,sarima
+Fab Operations,4,sarima,2026-12-01,134.26,84.42,184.11,58.03,210.49,sarima
+Fab Operations,4,sarima,2027-01-01,133.36,83.52,183.21,57.13,209.59,sarima
+Fab Operations,4,sarima,2027-02-01,131.86,82.02,181.71,55.63,208.09,sarima
+Fab Operations,4,sarima,2027-03-01,130.13,80.29,179.98,53.9,206.36,sarima
+Fab Operations,4,sarima,2027-04-01,128.47,78.62,178.31,52.24,204.69,sarima
+Fab Operations,4,sarima,2027-05-01,127.49,77.65,177.34,51.26,203.72,sarima
+Fab Operations,4,sarima,2027-06-01,125.76,75.92,175.61,49.53,201.99,sarima
+Fab Operations,4,sarima,2027-07-01,124.85,75.01,174.69,48.62,201.08,sarima
+Fab Operations,4,sarima,2027-08-01,125.85,76.01,175.7,49.62,202.08,sarima
+Facilities,4,sarima,2026-09-01,53.73,39.36,68.1,31.75,75.7,sarima
+Facilities,4,sarima,2026-10-01,54.18,39.81,68.55,32.2,76.15,sarima
+Facilities,4,sarima,2026-11-01,55.01,40.64,69.38,33.03,76.99,sarima
+Facilities,4,sarima,2026-12-01,54.84,40.47,69.21,32.86,76.82,sarima
+Facilities,4,sarima,2027-01-01,54.7,40.33,69.06,32.72,76.67,sarima
+Facilities,4,sarima,2027-02-01,54.56,40.19,68.93,32.59,76.54,sarima
+Facilities,4,sarima,2027-03-01,54.65,40.28,69.02,32.68,76.63,sarima
+Facilities,4,sarima,2027-04-01,56.09,41.72,70.46,34.11,78.07,sarima
+Facilities,4,sarima,2027-05-01,57.25,42.88,71.61,35.27,79.22,sarima
+Facilities,4,sarima,2027-06-01,57.18,42.81,71.55,35.2,79.15,sarima
+Facilities,4,sarima,2027-07-01,56.6,42.24,70.97,34.63,78.58,sarima
+Facilities,4,sarima,2027-08-01,56.54,42.17,70.91,34.57,78.52,sarima
+Quality,4,sarima,2026-09-01,49.01,35.27,62.75,28.0,70.03,sarima
+Quality,4,sarima,2026-10-01,48.01,34.27,61.76,27.0,69.03,sarima
+Quality,4,sarima,2026-11-01,47.64,33.9,61.38,26.63,68.66,sarima
+Quality,4,sarima,2026-12-01,46.76,33.02,60.5,25.74,67.77,sarima
+Quality,4,sarima,2027-01-01,46.38,32.63,60.12,25.36,67.39,sarima
+Quality,4,sarima,2027-02-01,45.95,32.21,59.69,24.93,66.96,sarima
+Quality,4,sarima,2027-03-01,45.75,32.0,59.49,24.73,66.76,sarima
+Quality,4,sarima,2027-04-01,45.34,31.6,59.09,24.33,66.36,sarima
+Quality,4,sarima,2027-05-01,44.47,30.73,58.21,23.45,65.48,sarima
+Quality,4,sarima,2027-06-01,42.88,29.14,56.62,21.87,63.9,sarima
+Quality,4,sarima,2027-07-01,41.06,27.32,54.8,20.05,62.08,sarima
+Quality,4,sarima,2027-08-01,40.4,26.66,54.15,19.39,61.42,sarima
+Supply Chain,4,sarima,2026-09-01,43.47,32.31,54.63,26.41,60.53,sarima
+Supply Chain,4,sarima,2026-10-01,43.5,32.35,54.66,26.44,60.57,sarima
+Supply Chain,4,sarima,2026-11-01,43.04,31.88,54.2,25.98,60.11,sarima
+Supply Chain,4,sarima,2026-12-01,43.39,32.23,54.55,26.32,60.45,sarima
+Supply Chain,4,sarima,2027-01-01,42.92,31.77,54.08,25.86,59.99,sarima
+Supply Chain,4,sarima,2027-02-01,42.5,31.34,53.65,25.43,59.56,sarima
+Supply Chain,4,sarima,2027-03-01,42.41,31.25,53.56,25.34,59.47,sarima
+Supply Chain,4,sarima,2027-04-01,42.31,31.16,53.47,25.25,59.38,sarima
+Supply Chain,4,sarima,2027-05-01,42.23,31.07,53.39,25.17,59.29,sarima
+Supply Chain,4,sarima,2027-06-01,42.15,30.99,53.3,25.08,59.21,sarima
+Supply Chain,4,sarima,2027-07-01,42.37,31.21,53.52,25.3,59.43,sarima
+Supply Chain,4,sarima,2027-08-01,42.27,31.12,53.43,25.21,59.34,sarima
+Test & Assembly,4,sarima,2026-09-01,85.52,59.81,111.23,46.2,124.84,sarima
+Test & Assembly,4,sarima,2026-10-01,85.94,60.23,111.65,46.62,125.26,sarima
+Test & Assembly,4,sarima,2026-11-01,85.0,59.29,110.71,45.68,124.32,sarima
+Test & Assembly,4,sarima,2026-12-01,84.05,58.34,109.76,44.73,123.37,sarima
+Test & Assembly,4,sarima,2027-01-01,82.62,56.91,108.33,43.3,121.94,sarima
+Test & Assembly,4,sarima,2027-02-01,79.89,54.18,105.6,40.57,119.21,sarima
+Test & Assembly,4,sarima,2027-03-01,78.26,52.55,103.97,38.94,117.58,sarima
+Test & Assembly,4,sarima,2027-04-01,76.54,50.83,102.25,37.23,115.86,sarima
+Test & Assembly,4,sarima,2027-05-01,76.4,50.69,102.11,37.08,115.72,sarima
+Test & Assembly,4,sarima,2027-06-01,76.42,50.71,102.13,37.1,115.74,sarima
+Test & Assembly,4,sarima,2027-07-01,75.76,50.06,101.47,36.45,115.08,sarima
+Test & Assembly,4,sarima,2027-08-01,74.76,49.06,100.47,35.45,114.08,sarima

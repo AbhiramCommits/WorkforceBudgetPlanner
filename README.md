@@ -56,6 +56,22 @@ deviates from plan by ±3–12%.
 - **Chronic non-labor underspend**: Brno Facilities consistently spends only 48–62%
   of its planned non-labor.
 
+## Analytics
+
+`make analytics` (requires a seeded database) runs the full chain:
+
+1. Creates the SQL views in `sql/views.sql`: `v_monthly_headcount`, `v_attrition`,
+   `v_req_aging`, `v_budget_variance`, `v_cost_per_head`.
+2. Runs 12-month headcount forecasts (Holt-Winters and SARIMA, with 80%/95% CIs) by
+   site and by (site, job family), a supply/demand bridge
+   (current active - forecast attrition + expected req fills), and a labor-budget
+   forecast using role salary bands plus fringe and overtime assumptions.
+3. Walk-forward backtests over the last 6 months and picks the winning method per site.
+4. Writes all view results and forecast output to `data/marts/` as Parquet + CSV.
+
+Model parameters (horizon, seasonal period, confidence levels, fringe rate, overtime)
+live in `config/params.yaml` — nothing is hardcoded in the code.
+
 ## Development
 
 ```sh

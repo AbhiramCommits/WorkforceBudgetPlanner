@@ -1,0 +1,9 @@
+site_id,method,mape,rmse,windows
+1,holtwinters,0.89,10.49,6
+1,sarima,1.15,12.52,6
+2,holtwinters,0.24,2.73,6
+2,sarima,0.19,1.69,6
+3,holtwinters,0.44,3.87,6
+3,sarima,0.67,5.77,6
+4,holtwinters,0.37,1.66,6
+4,sarima,0.36,1.79,6

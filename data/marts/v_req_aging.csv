@@ -1,0 +1,5 @@
+site_id,open_0_30_days,open_31_60_days,open_61_90_days,open_90_plus_days,open_total,closed_total,median_time_to_fill_days
+1,2,2,0,0,4,290,60.5
+2,3,3,0,0,6,333,58.0
+3,1,0,0,0,1,347,58.0
+4,2,1,0,0,3,120,58.0
