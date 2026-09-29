@@ -1,0 +1,28 @@
+[project]
+name = "workforce-budget-planner"
+version = "0.1.0"
+description = "Headcount and operating-budget forecasting for a multi-site semiconductor manufacturing org"
+requires-python = ">=3.11"
+dependencies = [
+    "SQLAlchemy==2.0.36",
+    "numpy==2.0.2",
+    "pandas==2.2.3",
+    "psycopg2-binary==2.9.10",
+    "python-dotenv==1.0.1",
+    "statsmodels==0.14.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4", "ruff==0.8.4"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

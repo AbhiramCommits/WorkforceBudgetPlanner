@@ -1,0 +1,18 @@
+role_id,role_name,job_family,salary_band,base_annual_usd
+1,Fab Operator,Fab Operations,OP1,42000
+2,Senior Fab Operator,Fab Operations,OP2,48000
+3,Equipment Technician,Fab Operations,T2,68000
+4,Operations Manager,Fab Operations,M1,138000
+5,Test Operator,Test & Assembly,OP1,40000
+6,Test Technician,Test & Assembly,T2,62000
+7,Test Engineer,Test & Assembly,E2,92000
+8,Facilities Technician,Facilities,T2,60000
+9,Facilities Engineer,Facilities,E2,90000
+10,Quality Inspector,Quality,OP2,45000
+11,Quality Engineer,Quality,E2,93000
+12,Planner,Supply Chain,P2,72000
+13,Buyer,Supply Chain,P1,58000
+14,Supply Chain Manager,Supply Chain,M1,135000
+15,Process Engineer,Engineering,E2,95000
+16,Equipment Engineer,Engineering,E3,105000
+17,Engineering Manager,Engineering,M1,142000

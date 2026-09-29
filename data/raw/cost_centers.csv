@@ -1,0 +1,25 @@
+cost_center_id,site_id,cc_code,cc_name,function
+1,1,GRS-FAB,Gresham Fab Operations,Fab Operations
+2,1,GRS-TNA,Gresham Test & Assembly,Test & Assembly
+3,1,GRS-FAC,Gresham Facilities,Facilities
+4,1,GRS-QLT,Gresham Quality,Quality
+5,1,GRS-SCM,Gresham Supply Chain,Supply Chain
+6,1,GRS-ENG,Gresham Engineering,Engineering
+7,2,RSV-FAB,Roseville Fab Operations,Fab Operations
+8,2,RSV-TNA,Roseville Test & Assembly,Test & Assembly
+9,2,RSV-FAC,Roseville Facilities,Facilities
+10,2,RSV-QLT,Roseville Quality,Quality
+11,2,RSV-SCM,Roseville Supply Chain,Supply Chain
+12,2,RSV-ENG,Roseville Engineering,Engineering
+13,3,SRB-FAB,Seremban Fab Operations,Fab Operations
+14,3,SRB-TNA,Seremban Test & Assembly,Test & Assembly
+15,3,SRB-FAC,Seremban Facilities,Facilities
+16,3,SRB-QLT,Seremban Quality,Quality
+17,3,SRB-SCM,Seremban Supply Chain,Supply Chain
+18,3,SRB-ENG,Seremban Engineering,Engineering
+19,4,BRN-FAB,Brno Fab Operations,Fab Operations
+20,4,BRN-TNA,Brno Test & Assembly,Test & Assembly
+21,4,BRN-FAC,Brno Facilities,Facilities
+22,4,BRN-QLT,Brno Quality,Quality
+23,4,BRN-SCM,Brno Supply Chain,Supply Chain
+24,4,BRN-ENG,Brno Engineering,Engineering
