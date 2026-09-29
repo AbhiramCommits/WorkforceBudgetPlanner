@@ -53,12 +53,10 @@ def _build_headcount_series(tables: dict[str, pd.DataFrame]) -> tuple[pd.DataFra
     monthly = tables["v_monthly_headcount"].merge(
         tables["roles"][["role_id", "job_family"]], on="role_id", how="left"
     )
-    site_series = (
-        monthly.groupby(["fiscal_month", "site_id"], as_index=False)["fte"].sum()
-    )
-    family_series = (
-        monthly.groupby(["fiscal_month", "site_id", "job_family"], as_index=False)["fte"].sum()
-    )
+    site_series = monthly.groupby(["fiscal_month", "site_id"], as_index=False)["fte"].sum()
+    family_series = monthly.groupby(["fiscal_month", "site_id", "job_family"], as_index=False)[
+        "fte"
+    ].sum()
     return site_series, family_series
 
 
@@ -109,9 +107,7 @@ def main() -> None:
         ignore_index=True,
     )
 
-    _, backtest_summary, winners = backtest(
-        site_series, group_cols=["site_id"], verbose=True
-    )
+    _, backtest_summary, winners = backtest(site_series, group_cols=["site_id"], verbose=True)
 
     site_names = tables["sites"].set_index("site_id")["site_name"]
     winner_rows = []

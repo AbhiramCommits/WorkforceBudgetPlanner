@@ -25,6 +25,14 @@ DEFAULT_PARAMS = {
     "budget": {
         "fringe_rate": 0.28,
         "overtime_fraction": 0.05,
+        "overtime_premium": 1.5,
+        "max_ot_hours_per_head": 60,
+    },
+    "scenarios": {
+        "hiring_freeze": {"start_month": 1},
+        "attrition_spike": {"multiplier": 1.75, "months": 6},
+        "overtime_shift": {"ot_hours_per_head": 160},
+        "accelerated_hiring": {"extra_reqs_per_month": 5, "ramp_cost_per_hire": 5000},
     },
 }
 
@@ -57,9 +65,7 @@ def to_datetime_columns(df: pd.DataFrame, columns: list[str]) -> pd.DataFrame:
     return out
 
 
-def _to_monthly_series(
-    df: pd.DataFrame, group_cols: list[str], value_col: str = "fte"
-) -> dict:
+def _to_monthly_series(df: pd.DataFrame, group_cols: list[str], value_col: str = "fte") -> dict:
     data = to_datetime_columns(df, ["fiscal_month"])
     series = {}
     for key, sub in data.groupby(group_cols, dropna=False):
@@ -229,9 +235,7 @@ def backtest(
             train = series.iloc[:-step]
             actual = float(series.iloc[-step])
             for method in methods:
-                forecast, _, _ = _fit_and_forecast(
-                    train, method, horizon, seasonal_periods, levels
-                )
+                forecast, _, _ = _fit_and_forecast(train, method, horizon, seasonal_periods, levels)
                 prediction = float(forecast.iloc[horizon - 1])
                 error = prediction - actual
                 record = {
@@ -274,6 +278,39 @@ def backtest(
     return detail, summary, winners
 
 
+def expected_fill_schedule(
+    requisitions: pd.DataFrame, horizon: int
+) -> dict[tuple[int, int], float]:
+    requisitions = to_datetime_columns(
+        requisitions, ["opened_date", "target_start_date", "filled_date"]
+    )
+    closed = requisitions[requisitions["status"].isin(["filled", "cancelled"])]
+    fill_rate = (
+        closed.assign(filled=(closed["status"] == "filled")).groupby("role_id")["filled"].mean()
+    )
+    global_fill_rate = float(closed["status"].eq("filled").mean()) if len(closed) else 0.0
+
+    filled = requisitions[requisitions["status"] == "filled"]
+    time_to_fill = filled.assign(ttf=(filled["filled_date"] - filled["opened_date"]).dt.days)
+    median_ttf = time_to_fill.groupby("role_id")["ttf"].median()
+    global_ttf = float(time_to_fill["ttf"].median()) if len(time_to_fill) else 0.0
+
+    open_reqs = requisitions[requisitions["status"] == "open"].copy()
+    if open_reqs.empty:
+        return {}
+    open_reqs["fill_rate"] = open_reqs["role_id"].map(fill_rate).fillna(global_fill_rate)
+    open_reqs["fill_month"] = (
+        np.ceil(open_reqs["role_id"].map(median_ttf).fillna(global_ttf) / 30.0)
+        .clip(1, horizon)
+        .astype(int)
+    )
+    expected = open_reqs.groupby(["site_id", "fill_month"], as_index=False)["fill_rate"].sum()
+    return {
+        (int(row["site_id"]), int(row["fill_month"])): float(row["fill_rate"])
+        for _, row in expected.iterrows()
+    }
+
+
 def supply_demand_bridge(
     roster: pd.DataFrame,
     requisitions: pd.DataFrame,
@@ -285,9 +322,6 @@ def supply_demand_bridge(
     horizon = horizon or params["horizon"]
 
     roster = to_datetime_columns(roster, ["hire_date", "term_date"])
-    requisitions = to_datetime_columns(
-        requisitions, ["opened_date", "target_start_date", "filled_date"]
-    )
     as_of = pd.Timestamp(as_of)
 
     active = roster[
@@ -296,37 +330,7 @@ def supply_demand_bridge(
     ]
     current_active = active.groupby("site_id").size().rename("current_active")
 
-    closed = requisitions[requisitions["status"].isin(["filled", "cancelled"])]
-    fill_rate = (
-        closed.assign(filled=(closed["status"] == "filled")).groupby("role_id")["filled"].mean()
-    )
-    global_fill_rate = float(closed["status"].eq("filled").mean()) if len(closed) else 0.0
-
-    filled = requisitions[requisitions["status"] == "filled"]
-    time_to_fill = filled.assign(
-        ttf=(filled["filled_date"] - filled["opened_date"]).dt.days
-    )
-    median_ttf = time_to_fill.groupby("role_id")["ttf"].median()
-    global_ttf = float(time_to_fill["ttf"].median()) if len(time_to_fill) else 0.0
-
-    open_reqs = requisitions[requisitions["status"] == "open"].copy()
-    expected_fills = pd.DataFrame()
-    if not open_reqs.empty:
-        open_reqs["fill_rate"] = open_reqs["role_id"].map(fill_rate).fillna(global_fill_rate)
-        open_reqs["fill_month"] = (
-            np.ceil(
-                open_reqs["role_id"].map(median_ttf).fillna(global_ttf) / 30.0
-            )
-            .clip(1, horizon)
-            .astype(int)
-        )
-        expected_fills = (
-            open_reqs.groupby(["site_id", "fill_month"], as_index=False)["fill_rate"].sum()
-        )
-    expected_map = {
-        (row["site_id"], row["fill_month"]): row["fill_rate"]
-        for _, row in expected_fills.iterrows()
-    }
+    expected_map = expected_fill_schedule(requisitions, horizon)
 
     months = pd.date_range(as_of + pd.offsets.MonthBegin(1), periods=horizon, freq="MS")
     rows = []
@@ -362,6 +366,27 @@ def supply_demand_bridge(
     return pd.DataFrame(rows)
 
 
+def blended_salaries(roles: pd.DataFrame, roster: pd.DataFrame) -> pd.DataFrame:
+    roster = to_datetime_columns(roster, ["hire_date", "term_date"])
+    active = roster[roster["term_date"].isna()]
+
+    mix = active.merge(roles[["role_id", "job_family"]], on="role_id")
+    counts = (
+        mix.groupby(["site_id", "job_family", "role_id"], as_index=False)
+        .size()
+        .rename(columns={"size": "n"})
+    )
+    counts["total"] = counts.groupby(["site_id", "job_family"])["n"].transform("sum")
+    counts["weight"] = counts["n"] / counts["total"]
+    counts["band"] = counts["role_id"].map(roles.set_index("role_id")["base_annual_usd"])
+    return (
+        counts.assign(weighted=counts["weight"] * counts["band"])
+        .groupby(["site_id", "job_family"], as_index=False)["weighted"]
+        .sum()
+        .rename(columns={"weighted": "blended_salary_usd"})
+    )
+
+
 def forecast_budget(
     headcount_forecast: pd.DataFrame,
     family_forecast: pd.DataFrame,
@@ -376,24 +401,7 @@ def forecast_budget(
         params["overtime_fraction"] if overtime_fraction is None else overtime_fraction
     )
 
-    roster = to_datetime_columns(roster, ["hire_date", "term_date"])
-    active = roster[roster["term_date"].isna()]
-
-    mix = active.merge(roles[["role_id", "job_family"]], on="role_id")
-    counts = (
-        mix.groupby(["site_id", "job_family", "role_id"], as_index=False)
-        .size()
-        .rename(columns={"size": "n"})
-    )
-    counts["total"] = counts.groupby(["site_id", "job_family"])["n"].transform("sum")
-    counts["weight"] = counts["n"] / counts["total"]
-    counts["band"] = counts["role_id"].map(roles.set_index("role_id")["base_annual_usd"])
-    blended = (
-        counts.assign(weighted=counts["weight"] * counts["band"])
-        .groupby(["site_id", "job_family"], as_index=False)["weighted"]
-        .sum()
-        .rename(columns={"weighted": "blended_salary_usd"})
-    )
+    blended = blended_salaries(roles, roster)
 
     family = to_datetime_columns(family_forecast, ["fiscal_month"]).copy()
     family["family_total"] = family.groupby(["site_id", "fiscal_month"])["forecast"].transform(

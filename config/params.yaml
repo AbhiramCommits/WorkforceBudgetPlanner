@@ -8,3 +8,17 @@ forecast:
 budget:
   fringe_rate: 0.28
   overtime_fraction: 0.05
+  overtime_premium: 1.5
+  max_ot_hours_per_head: 60
+
+scenarios:
+  hiring_freeze:
+    start_month: 1
+  attrition_spike:
+    multiplier: 1.75
+    months: 6
+  overtime_shift:
+    ot_hours_per_head: 160
+  accelerated_hiring:
+    extra_reqs_per_month: 5
+    ramp_cost_per_hire: 5000

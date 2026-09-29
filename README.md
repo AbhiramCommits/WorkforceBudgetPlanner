@@ -72,6 +72,27 @@ deviates from plan by ±3–12%.
 Model parameters (horizon, seasonal period, confidence levels, fringe rate, overtime)
 live in `config/params.yaml` — nothing is hardcoded in the code.
 
+## Scenario modeling
+
+`make scenarios` runs the scenario engine (`src/wbp/scenarios.py`) and the Excel
+deliverable (`src/wbp/excel_report.py`):
+
+- Declarative scenarios: `hiring_freeze`, `attrition_spike`, `overtime_shift`,
+  `accelerated_hiring`, composable via `compose()`. Each returns the same canonical
+  monthly schema (headcount, attrition, fills, labor, overtime, other, total) as the
+  baseline, so scenarios compare directly.
+- Side-by-side comparison (ending headcount, labor/OT/other costs, cost per head,
+  delta vs baseline in USD and %) plus a numeric break-even: the attrition multiplier
+  at which the overtime policy becomes more expensive than backfill hiring.
+- Writes `scenario_monthly`, `scenario_comparison`, and `scenario_break_even` marts
+  to `data/marts/`, and builds `reports/workforce_planning_model.xlsx` with live
+  Excel formulas wired to the `Assumptions` named ranges (fringe rate, OT premium,
+  attrition multiplier, hire cost), conditional formatting on variances, a baseline
+  vs scenario headcount line chart, a variance-by-cost-center bar chart, freeze
+  panes, and autofilters. Change an assumption cell and the model recomputes.
+
+Scenario parameters live in `config/params.yaml` under `scenarios` and `budget`.
+
 ## Development
 
 ```sh

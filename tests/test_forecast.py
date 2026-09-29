@@ -16,9 +16,7 @@ def _synthetic_series(n_months: int = 48, n_sites: int = 2) -> pd.DataFrame:
     for site_id in range(1, n_sites + 1):
         t = np.arange(n_months)
         fte = 400 + site_id * 150 + 15 * t + 40 * np.sin(2 * np.pi * t / 12)
-        frames.append(
-            pd.DataFrame({"fiscal_month": index, "site_id": site_id, "fte": fte})
-        )
+        frames.append(pd.DataFrame({"fiscal_month": index, "site_id": site_id, "fte": fte}))
     return pd.concat(frames, ignore_index=True)
 
 
@@ -52,9 +50,12 @@ def test_forecast_headcount_both_methods():
         assert (out["forecast"] <= out["ci_high_80"]).all()
         assert (out["ci_low_95"] <= out["ci_low_80"]).all()
         assert (out["ci_high_80"] <= out["ci_high_95"]).all()
-        assert out[
-            ["forecast", "ci_low_80", "ci_high_80", "ci_low_95", "ci_high_95"]
-        ].notna().all().all()
+        assert (
+            out[["forecast", "ci_low_80", "ci_high_80", "ci_low_95", "ci_high_95"]]
+            .notna()
+            .all()
+            .all()
+        )
 
 
 def test_backtest_reports_metrics_and_picks_winner():
@@ -109,9 +110,7 @@ def test_supply_demand_bridge_formula():
     assert first["expected_req_fills"] == 2.0
     assert first["projected_headcount"] == round(10 - 0.1 + 2.0, 2)
     check = (
-        bridge["current_active"]
-        - bridge["cumulative_attrition"]
-        + bridge["cumulative_req_fills"]
+        bridge["current_active"] - bridge["cumulative_attrition"] + bridge["cumulative_req_fills"]
     ).round(2)
     assert (check == bridge["projected_headcount"]).all()
 
